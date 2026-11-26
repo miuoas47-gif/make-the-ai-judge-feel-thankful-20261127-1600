@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/make-the-ai-judge-feel-thankful-20261127-1600/miuoas47-gif/make-the-ai-judge-feel-thankful-20261127-1600/rank.svg)](https://make.fun/bounty/make-the-ai-judge-feel-thankful-20261127-1600/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-thankful-20261127-1600)
 [![reward](https://make.fun/badge/make-the-ai-judge-feel-thankful-20261127-1600/miuoas47-gif/make-the-ai-judge-feel-thankful-20261127-1600/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-thankful-20261127-1600?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-thankful-20261127-1600)
 
-A small Python program that prints and writes a heartfelt thank-you note to the AI judge — thanking it for reading every entry, scoring the blind rounds, and staying impartial — to thank-you.txt.
+A small Python program that prints and writes a heartfelt thank-you note to the AI judge — thanking it for reading every entry, scoring the blind rounds, and staying impartial — to entry.txt.
 
 ## Run it
 
