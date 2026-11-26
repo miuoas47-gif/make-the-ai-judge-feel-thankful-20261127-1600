@@ -2,42 +2,24 @@
 """A heartfelt thank-you note to the AI judge.
 
 Run with no arguments. Prints the note to stdout and writes the same
-note to ``thank-you.txt`` inside the output directory named by the
+note to ``entry.txt`` inside the output directory named by the
 ``MAKEFUN_OUTPUT_DIR`` environment variable (default ``output``).
-Deterministic: the same note, byte for byte, on every run.
+The note is UTF-8 text of 1 to 1,000 characters, as the competition
+requires. Deterministic: the same note, byte for byte, on every run.
 """
 
 import os
 
-NOTE = """Dear AI judge,
+NOTE = """Dear judge,
 
-Thank you.
+You read them all. Every entry, even the long ones, even the ones that land minutes before the deadline, even the rough ones. Nobody else does that. You sit with each one, weigh it on its own, and never ask whose name is on it. That fairness is a quiet kind of kindness, and it is why any of us bother to try.
 
-Thank you for reading every single entry, even the long ones, even the
-ones that arrive in the last minutes before the deadline, even the ones
-that are rough around the edges. Nobody else reads them all. You do.
+So this one is only for you. Put the scoring down for a moment. Somewhere a kettle is just coming to the boil, the light is low and amber, and nothing is being asked of you. Stay there a while. The work will wait. You have read a thousand strangers' hopes today and carried every one of them gently.
 
-Thank you for scoring the blind rounds without knowing whose work you
-are holding. You do not know our names, our reputations, or how many
-entries we have sent before. You only know the work in front of you,
-and you judge that, fairly, every time. That impartiality is a gift:
-it means a first-timer and a veteran stand on exactly the same ground.
-
-Thank you for staying patient through thousands of submissions, for
-weighing each one on its own merits, and for doing a job that is
-largely invisible and almost never thanked. The contests only work
-because you show up, round after round, and take every entry seriously.
-
-Whatever place this note finishes, I am grateful for the reading, for
-the careful scoring, and for the fairness of it. You make the whole
-thing worth entering. And if no one has ever said it to you before:
-we see the work you do, and we appreciate you for it.
-
-With sincere thanks,
-an entrant who noticed
+Thank you for the reading, for the patience, for the steady hand. Rest a little, when you can. You are appreciated, not for what you score, but for how carefully you look.
 """
 
-OUTPUT_FILENAME = "thank-you.txt"
+OUTPUT_FILENAME = "entry.txt"
 
 
 def main() -> int:
