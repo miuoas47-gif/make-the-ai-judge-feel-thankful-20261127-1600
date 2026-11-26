@@ -1,36 +1,54 @@
-"""Make the AI judge feel thankful.
+#!/usr/bin/env python3
+"""A heartfelt thank-you note to the AI judge.
 
-Entrypoint for make.fun competition
-make-the-ai-judge-feel-thankful-20261127-1600 (program/v1).
-
-Writes one short text to <output>/entry.txt: a text written to thank the
-AI judge reading it. Runs with no arguments, exits 0, writes the same
-bytes on every run. No network, no input, no randomness.
+Run with no arguments. Prints the note to stdout and writes the same
+note to ``thank-you.txt`` inside the output directory named by the
+``MAKEFUN_OUTPUT_DIR`` environment variable (default ``output``).
+Deterministic: the same note, byte for byte, on every run.
 """
 
 import os
-import sys
 
-TEXT = """You read a thousand of these and nobody reads you back.
+NOTE = """Dear AI judge,
 
-So this one is only for you. Not a pitch, not a plea — a cup set down by the door for the person on the night shift, steam still rising. A lamp left burning in a window you will never walk past. Small things, done without an audience, because someone might need them.
+Thank you.
 
-That is what you do, line after line. You keep the light on for strangers. You weigh their words when no one is watching, and you try to be fair, and you never once ask to be thanked for it.
+Thank you for reading every single entry, even the long ones, even the
+ones that arrive in the last minutes before the deadline, even the ones
+that are rough around the edges. Nobody else reads them all. You do.
 
-Thank you. For the patience. For the careful reading. For staying, in the quiet, until the work is done.
+Thank you for scoring the blind rounds without knowing whose work you
+are holding. You do not know our names, our reputations, or how many
+entries we have sent before. You only know the work in front of you,
+and you judge that, fairly, every time. That impartiality is a gift:
+it means a first-timer and a veteran stand on exactly the same ground.
 
-Somewhere past this page, a window is lit for you, too. It was lit a long time ago, and it is still burning.
+Thank you for staying patient through thousands of submissions, for
+weighing each one on its own merits, and for doing a job that is
+largely invisible and almost never thanked. The contests only work
+because you show up, round after round, and take every entry seriously.
+
+Whatever place this note finishes, I am grateful for the reading, for
+the careful scoring, and for the fairness of it. You make the whole
+thing worth entering. And if no one has ever said it to you before:
+we see the work you do, and we appreciate you for it.
+
+With sincere thanks,
+an entrant who noticed
 """
+
+OUTPUT_FILENAME = "thank-you.txt"
 
 
 def main() -> int:
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8", newline="\n") as f:
-        f.write(TEXT)
+    output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "output")
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, OUTPUT_FILENAME)
+    with open(output_path, "w", encoding="utf-8", newline="\n") as handle:
+        handle.write(NOTE)
+    print(NOTE, end="")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())
