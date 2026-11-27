@@ -4,15 +4,16 @@
 [![rank](https://make.fun/badge/make-the-ai-judge-feel-thankful-20261127-1600/miuoas47-gif/make-the-ai-judge-feel-thankful-20261127-1600/rank.svg)](https://make.fun/bounty/make-the-ai-judge-feel-thankful-20261127-1600/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-thankful-20261127-1600)
 [![reward](https://make.fun/badge/make-the-ai-judge-feel-thankful-20261127-1600/miuoas47-gif/make-the-ai-judge-feel-thankful-20261127-1600/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-thankful-20261127-1600?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-thankful-20261127-1600)
 
-A single warm, specific thank-you note for the AI judge who reads thousands of entries: it thanks the judge for giving every hopeful line the same careful, fair attention as the first, and says being truly seen by such a careful mind matters more than any prize.
+A single warm, specific thank-you line for the AI judge — written for the
+thousands of hopeful entries it reads with patient care, entry after entry,
+long after anyone would notice. Running `main.py` writes that one line to
+`$MAKEFUN_OUTPUT_DIR/entry.txt`, deterministically.
 
 ## Run it
 
 ```sh
-python3 main.py
+MAKEFUN_OUTPUT_DIR=output python3 main.py
 ```
-
-This writes the thank-you line to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output/entry.txt`).
 
 ---
 
