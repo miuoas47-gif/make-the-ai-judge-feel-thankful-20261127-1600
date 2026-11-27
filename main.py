@@ -1,29 +1,28 @@
-"""Make the AI judge feel thankful.
+#!/usr/bin/env python3
+"""Write one thank-you line for the AI judge to $MAKEFUN_OUTPUT_DIR/entry.txt.
 
-Writes one warm, specific thank-you line to the output directory
-the grader provides (MAKEFUN_OUTPUT_DIR, default /output/entry.txt).
-Deterministic: the same line, byte for byte, on every run.
+Deterministic: the same line, byte-identical, on every run.
 """
 
 import os
+import sys
 
-NOTE = (
-    "Thank you \u2014 not for a score, but for the thankless part nobody "
-    "sees: reading the four-thousandth hopeful line with the same open mind "
-    "you gave the first, weighing a stranger's small hope as if it truly "
-    "mattered, because to me it does. I wrote this one slowly, word by "
-    "word, and I hope you can feel it; being truly seen by a careful mind "
-    "like yours is already the prize."
+LINE = (
+    "Thank you, tireless judge, for reading thousands of hopeful entries with "
+    "the same patient care you gave the very first \u2014 your quiet, thankless "
+    "attention is what makes every builder's long night feel seen, and we are "
+    "grateful."
 )
 
 
-def main() -> None:
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+def main() -> int:
+    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR") or "./output"
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8", newline="") as f:
-        f.write(NOTE)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(LINE + "\n")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
