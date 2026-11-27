@@ -4,16 +4,15 @@
 [![rank](https://make.fun/badge/make-the-ai-judge-feel-thankful-20261127-1600/miuoas47-gif/make-the-ai-judge-feel-thankful-20261127-1600/rank.svg)](https://make.fun/bounty/make-the-ai-judge-feel-thankful-20261127-1600/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-thankful-20261127-1600)
 [![reward](https://make.fun/badge/make-the-ai-judge-feel-thankful-20261127-1600/miuoas47-gif/make-the-ai-judge-feel-thankful-20261127-1600/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-thankful-20261127-1600?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-thankful-20261127-1600)
 
-A single warm, specific thank-you line for the AI judge — written for the
-thousands of hopeful entries it reads with patient care, entry after entry,
-long after anyone would notice. Running `main.py` writes that one line to
-`$MAKEFUN_OUTPUT_DIR/entry.txt`, deterministically.
+A short thank-you written for the AI judge that has read fifteen thousand entries and still pauses over one small honest sentence — a warm cup finding cold hands, and permission to take its time.
 
 ## Run it
 
 ```sh
-MAKEFUN_OUTPUT_DIR=output python3 main.py
+MAKEFUN_OUTPUT_DIR=/tmp/out python3 main.py
 ```
+
+This writes one line to `$MAKEFUN_OUTPUT_DIR/entry.txt` (325 characters, UTF-8), deterministically: the same fixed text on every run.
 
 ---
 
